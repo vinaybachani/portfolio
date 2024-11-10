@@ -7,14 +7,16 @@ const Cursor = () => {
     const { isDarkTheme } = useContext(ThemeContext);
     const cursorColor = isDarkTheme ? '88, 230, 217' : '182, 62, 150';
     return (
-        <AnimatedCursor
-            innerSize={20}
-            outerSize={4}
-            color={cursorColor}
-            outerAlpha={0.2}
-            innerScale={0.5}
-            outerScale={5}
-        />
+        <div className='hidden lg:block'>
+            <AnimatedCursor
+                innerSize={20}
+                outerSize={4}
+                color={cursorColor}
+                outerAlpha={0.2}
+                innerScale={0.5}
+                outerScale={5}
+            />
+        </div>
     )
 }
 
