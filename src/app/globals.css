@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    list-style: none;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.skilldark::after,
+.skilldark::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #fff,
+            #58E6D9) !important;
+    /* #ff4545, #00ff99, #006aff, #ff0095, #ff4545 */
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 60px 78px;
+    border-radius: 0.5rem;
+    animation: 3s spindark linear infinite;
+}
+
+.skilldark::before {
+    filter: blur(0.2rem);
+    opacity: 0.2;
+}
+
+@keyframes spindark {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+.skilllight::after,
+.skilllight::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #fff,
+            #B63E96);
+    /* #ff4545, #00ff99, #006aff, #ff0095, #ff4545 */
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 60px 78px;
+    border-radius: 0.5rem;
+    animation: 3s spinlight linear infinite;
+}
+
+.skilllight::before {
+    filter: blur(0.2rem);
+    opacity: 0.2;
+}
+
+@keyframes spinlight {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    /* background: #58E6D9; */
+    transform: scale(0);
+    animation: ripple-animation 600ms linear;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
