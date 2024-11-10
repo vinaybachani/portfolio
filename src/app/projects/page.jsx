@@ -38,7 +38,7 @@ const FeaturedProjects = ({ type, title, img, summary, link, github, tools }) =>
         <Link href={link} target='_blank' className='hover:underline underline-offset-2'>
           <h2 className='my-2 w-full text-left text-sm sm:text-3xl font-bold dark:text-light'>{title}</h2>
         </Link>
-        <p className='my-2 font-medium text-dark dark:text-light text-sm sm:text-lg'>{summary}</p>
+        <p className='my-2 font-medium text-dark dark:text-light text-sm sm:text-lg text-justify'>{summary}</p>
         <div className='relative w-full flex flex-wrap'>
           {
             tools.map((tech, index) => {
@@ -79,7 +79,7 @@ const Project = ({ title, type, img, link, github, tools, description }) => {
         <Link href={link} target='_blank' className='hover:underline underline-offset-2'>
           <h2 className='my-2 w-full text-left text-2xl lg:text-3xl font-bold'>{title}</h2>
         </Link>
-        <p className='text-[13px]'>{description}</p>
+        <p className='text-[14px] text-justify'>{description}</p>
         <div className='w-full mt-2'>
           <div className="w-full">
             <div className='relative w-full flex flex-wrap'>

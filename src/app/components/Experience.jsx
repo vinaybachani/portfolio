@@ -19,7 +19,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
                 <span className='capitalize font-medium text-dark/75 dark:text-light/75 text-sm sm:text-lg'>
                     {time} | {address}
                 </span>
-                <p className='font-medium w-full text-sm md:text-lg'>{work}</p>
+                <p className='font-medium w-full text-sm md:text-lg text-justify'>{work}</p>
             </motion.div>
         </li>
     )
@@ -41,40 +41,32 @@ const Experience = () => {
                 <RippleButton path={'/audios/degree_nahi_hogi.m4a'} ref={degreeRef} classes={`relative h-10 w-10 flex items-center justify-center uppercase text-3xl leading-3 bg-gray-300 dark:bg-gray-700 rounded-full p-2 outline-none border-none`} />
             </div>
             <div className='w-full md:w-[90%] lg:w-[75%] mx-auto relative' ref={ref}>
-                <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-[20px] sm:left-[30px] md:left-9 top-0 w-[2px] md:w-[4px] h-full bg-dark origin-top dark:bg-light' />
+                <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-[20px] sm:left-[30px] md:left-9 top-0 w-[2px] md:w-[4px] h-full bg-primary origin-top dark:bg-primaryDark' />
                 <ul className='w-full flex flex-col items-start justify-between ml-2 sm:ml-4'>
                     <Details position={"React Developer"}
                         company={"Franchise Insider"}
-                        companyLink="www.google.com"
+                        companyLink="https://www.momentum91.com/"
                         time={"November 2021 - November 2022"}
                         address={"Ahmedabad, Gujarat"}
-                        work="Worked on a team responsible for developing new features for Google's
-                    search engine, including improving the accuracy and relevance of search results and
-                    developing new tools for data analysis and visualization."/>
+                        work="Revamped the portal with ReactJS, reducing loading time and improving page efficiency from 45% to 88%. Designed dynamic, client-specific landing pages that boosted user engagement by 30%, enhancing overall user experience."/>
                     <Details position={"Frontend Developer"}
                         company={"Availkart"}
-                        companyLink="www.google.com"
+                        companyLink="/"
                         time={"November 2022 - March 2023"}
                         address={"Remote"}
-                        work="Worked on a team responsible for developing new features for Google's
-                    search engine, including improving the accuracy and relevance of search results and
-                    developing new tools for data analysis and visualization."/>
+                        work="Developed the front-end of an e-commerce website using HTML5, CSS3, Bootstrap 5, JQuery, and JS plugins. Implemented responsive design to ensure seamless adaptation across devices (desktop, tablet, mobile) with a minimum width of 250px, optimizing user experience through fluid layouts and media queries."/>
                     <Details position={"Software Engineer Intern"}
                         company={"Momentum Ventures"}
-                        companyLink="www.google.com"
+                        companyLink="https://www.momentum91.com/"
                         time={"January 2024 - July 2024"}
                         address={"Ahmedabad, Gujarat"}
-                        work="Worked on a team responsible for developing new features for Google's
-                    search engine, including improving the accuracy and relevance of search results and
-                    developing new tools for data analysis and visualization."/>
+                        work="Developed a Google Meet-like platform with Next.js, reducing page load times by 30% and boosting user engagement by 25%. Used React Redux Toolkit for responsive meeting screens, improving UI performance by 20%, and leveraged local storage for 15% faster data access. Integrated Dyte for live video/audio, streamlining development."/>
                     <Details position={"Full Stack Developer"}
                         company={"ATTPL"}
-                        companyLink="www.google.com"
+                        companyLink="https://attplems.com/"
                         time={"July 2024 - Present"}
                         address={"Remote"}
-                        work="Worked on a team responsible for developing new features for Google's
-                    search engine, including improving the accuracy and relevance of search results and
-                    developing new tools for data analysis and visualization."/>
+                        work="Contributed to the development of an Election Management System (EMS) with multiple portals tailored to different professions, each serving specific purposes and functionality for diverse user needs."/>
                 </ul>
             </div>
         </div>

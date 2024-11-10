@@ -50,7 +50,7 @@ const AboutPage = () => {
         <Layout className='!pt-10'>
           <AnimateText text={'Passion Powers Purpose!'} className='mb-14 !text-3xl md:!text-6xl lg:!text-7xl text-center' />
           <div className="grid w-full grid-cols-8 gap-8 sm:gap-16">
-            <div className='col-span-8 sm:col-span-8 md:col-span-4 lg:col-span-4 xl:col-span-3 flex flex-col items-start justify-start order-2 md:order-1'>
+            <div className='col-span-8 sm:col-span-8 md:col-span-4 lg:col-span-4 xl:col-span-3 flex flex-col items-start justify-start order-2 md:order-1 text-justify'>
               <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>Biography</h2>
               <p className='font-medium'>
                 {`Hello! I’m Vinay Bachani, a dedicated web developer with a focus on designing beautiful, dynamic and user-centered digital experiences. With two years of experience, I’m always excited to find fresh, innovative methods to turn client visions into reality.`}
@@ -71,7 +71,7 @@ const AboutPage = () => {
               <Image
                 src={profilePic}
                 alt='about'
-                className='w-full h-auto xl:h-80 rounded-2xl'
+                className='w-full h-auto rounded-2xl'
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
