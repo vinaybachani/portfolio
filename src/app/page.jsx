@@ -28,7 +28,7 @@ export default function Home() {
                 As a skilled full-stack developer, I am committed to transforming ideas into cutting-edge web applications. Check out my latest projects, highlighting my expertise in tech stacks such as Next.js, React.js, Node.js, and overall web development.
               </p>
               <div className="flex items-center self-center lg:self-start mt-4">
-                <Link href={"/dummy.pdf"} target={"_blank"} className="flex items-center bg-dark text-base text-light p-1.5 px-4 md:p-2.5 md:px-6 md:text-lg rounded-lg font-semibold hover:bg-light hover:text-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light border-2 border-solid border-transparent hover:border-dark" download={true}>Resume <LinkArrow className={"w-6 ml-1"} /></Link>
+                <Link href={"/Vinay_Resume.pdf"} target={"_blank"} className="flex items-center bg-dark text-base text-light p-1.5 px-4 md:p-2.5 md:px-6 md:text-lg rounded-lg font-semibold hover:bg-light hover:text-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light border-2 border-solid border-transparent hover:border-dark" download={true}>Resume <LinkArrow className={"w-6 ml-1"} /></Link>
                 <Link href={"mailto:blikevinay@gmail.com"} className="ml-4 text-base md:text-lg font-medium capitalize text-dark underline dark:text-light">Contact</Link>
               </div>
             </div>
