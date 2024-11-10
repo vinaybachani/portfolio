@@ -24,8 +24,9 @@ export default function RootLayout({ children }) {
     <ThemeProvider>
       <html lang="en">
         <Head>
+          <meta name="description" content="Vinay Bachani Portfolio" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/public/images/favicon.ico" />
+          <link rel="icon" href="/images/favicon.ico" />
           {/* <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" /> */}
         </Head>
         <body className={`${montserrat.variable} font-mont antialiased min-h-screen bg-light dark:bg-dark overflow-x-hidden`}>
