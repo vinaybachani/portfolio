@@ -70,10 +70,10 @@ const NavBar = () => {
                     {/* <CustomLink href="/articles" title="Articles" className='ml-4' /> */}
                 </nav>
                 <nav className='flex items-center justify-center flex-wrap'>
-                    <MotionLink href="" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.7 }}><TwitterIcon /></MotionLink>
-                    <MotionLink href="" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><LinkedinIcon /></MotionLink>
-                    <MotionLink href="" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><GitHubIcon /></MotionLink>
-                    <MotionLink href="" target={"_blank"} className='w-6 mx-2 dark:fill-light' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><LeetCodeIcon /></MotionLink>
+                    {/* <MotionLink href="" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.7 }}><TwitterIcon /></MotionLink> */}
+                    <MotionLink href="https://www.linkedin.com/in/vinay-bachani/" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><LinkedinIcon /></MotionLink>
+                    <MotionLink href="https://github.com/vinaybachani" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><GitHubIcon /></MotionLink>
+                    <MotionLink href="https://leetcode.com/u/vinaybachani1234/" target={"_blank"} className='w-6 mx-2 dark:fill-light' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><LeetCodeIcon /></MotionLink>
 
                     <button onClick={() => setMode(mode === "light" ? "dark" : "light")} className={`ml-1 flex items-center justify-center rounded-full p-1 ${mode === "dark" ? "bg-light text-dark" : "bg-dark text-light"}`}>
                         {
@@ -95,10 +95,10 @@ const NavBar = () => {
                             {/* <CustomMobileLink href="/articles" title="Articles" className='' toggle={handleClick} /> */}
                         </nav>
                         <nav className='flex items-center justify-center flex-wrap mt-2'>
-                            <MotionLink href="" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.7 }}><TwitterIcon /></MotionLink>
-                            <MotionLink href="" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><LinkedinIcon /></MotionLink>
-                            <MotionLink href="" target={"_blank"} className='w-6 mx-3 dark:bg-dark bg-light rounded-full' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><GitHubIcon /></MotionLink>
-                            <MotionLink href="" target={"_blank"} className='w-6 mx-2 dark:fill-dark fill-light' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><LeetCodeIcon /></MotionLink>
+                            {/* <MotionLink href="" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.7 }}><TwitterIcon /></MotionLink> */}
+                            <MotionLink href="https://www.linkedin.com/in/vinay-bachani/" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><LinkedinIcon /></MotionLink>
+                            <MotionLink href="https://github.com/vinaybachani" target={"_blank"} className='w-6 mx-3 dark:bg-dark bg-light rounded-full' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><GitHubIcon /></MotionLink>
+                            <MotionLink href="https://leetcode.com/u/vinaybachani1234/" target={"_blank"} className='w-6 mx-2 dark:fill-dark fill-light' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><LeetCodeIcon /></MotionLink>
 
                             <button onClick={() => setMode(mode === "light" ? "dark" : "light")} className={`ml-1 flex items-center justify-center rounded-full p-1 ${mode === "dark" ? "bg-light text-dark" : "bg-dark text-light"}`}>
                                 {
