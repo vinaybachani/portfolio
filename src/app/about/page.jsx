@@ -53,7 +53,7 @@ const AboutPage = () => {
             <div className='col-span-8 sm:col-span-8 md:col-span-4 lg:col-span-4 xl:col-span-3 flex flex-col items-start justify-start order-2 md:order-1 text-justify'>
               <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>Biography</h2>
               <p className='font-medium'>
-                {`Hello! I’m Vinay Bachani, a dedicated web developer with a focus on designing beautiful, dynamic and user-centered digital experiences. With two years of experience, I’m always excited to find fresh, innovative methods to turn client visions into reality.`}
+                {`Hello! I’m Vinay Bachani, a dedicated web developer with a focus on designing beautiful, dynamic and user-centric digital experiences. With two years of experience, I’m always excited to find fresh, innovative methods to turn client visions into reality.`}
               </p>
 
               <p className='font-medium my-4'>
