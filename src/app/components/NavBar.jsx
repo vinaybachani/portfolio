@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link'
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import Logo from './Logo'
 import { TwitterIcon, LinkedinIcon, GitHubIcon, LeetCodeIcon, SunIcon, MoonIcon } from './Icons'
 import { motion } from "framer-motion";
@@ -54,6 +54,32 @@ const NavBar = () => {
     const handleClick = () => {
         setIsOpen((prev) => !prev)
     }
+    useEffect(() => {
+        if (isOpen) {
+            document.body.classList.add('no-scroll');
+        }
+        else {
+            document.body.classList.remove('no-scroll');
+        }
+
+        return () => {
+            document.body.classList.remove('no-scroll');
+        }
+    }, [isOpen]);
+
+    const modalRef = useRef(null);
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (modalRef.current && !modalRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        }
+        document.addEventListener("mousedown", handleOutsideClick);
+
+        return () => {
+            document.removeEventListener("mousedown", handleOutsideClick);
+        };
+    }, [setIsOpen]);
 
     return (
         <header className='w-full px-8 py-8 z-10 font-medium flex items-center justify-between dark:text-light relative md:px-12 lg:px-32'>
@@ -72,7 +98,7 @@ const NavBar = () => {
                 </nav>
                 <nav className='flex items-center justify-center flex-wrap'>
                     {/* <MotionLink href="" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.7 }}><TwitterIcon /></MotionLink> */}
-                    <MotionLink href="tel:6354558233" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><PhoneIcon/></MotionLink>
+                    <MotionLink href="tel:6354558233" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><PhoneIcon /></MotionLink>
                     <MotionLink href="https://www.linkedin.com/in/vinay-bachani/" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><LinkedinIcon /></MotionLink>
                     <MotionLink href="https://github.com/vinaybachani" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><GitHubIcon /></MotionLink>
                     <MotionLink href="https://leetcode.com/u/vinaybachani1234/" target={"_blank"} className='w-6 mx-2 dark:fill-light' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><LeetCodeIcon /></MotionLink>
@@ -89,7 +115,7 @@ const NavBar = () => {
 
             {
                 isOpen ?
-                    <motion.div className='min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32' initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }} animate={{ scale: 1, opacity: 1 }}>
+                    <motion.div ref={modalRef} className='min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32' initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }} animate={{ scale: 1, opacity: 1 }}>
                         <nav className='flex items-center flex-col justify-center'>
                             <CustomMobileLink href="/" title="Home" className='' toggle={handleClick} />
                             <CustomMobileLink href="/about" title="About" className='' toggle={handleClick} />
@@ -98,7 +124,7 @@ const NavBar = () => {
                         </nav>
                         <nav className='flex items-center justify-center flex-wrap mt-2'>
                             {/* <MotionLink href="" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.7 }}><TwitterIcon /></MotionLink> */}
-                            <MotionLink href="tel:6354558233" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><PhoneIcon className='dark:fill-dark fill-light'/></MotionLink>
+                            <MotionLink href="tel:6354558233" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><PhoneIcon className='dark:fill-dark fill-light' /></MotionLink>
                             <MotionLink href="https://www.linkedin.com/in/vinay-bachani/" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><LinkedinIcon /></MotionLink>
                             <MotionLink href="https://github.com/vinaybachani" target={"_blank"} className='w-6 mx-3 dark:bg-dark bg-light rounded-full' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><GitHubIcon /></MotionLink>
                             <MotionLink href="https://leetcode.com/u/vinaybachani1234/" target={"_blank"} className='w-6 mx-2 dark:fill-dark fill-light' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><LeetCodeIcon /></MotionLink>
