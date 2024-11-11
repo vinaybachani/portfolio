@@ -8,6 +8,7 @@ import useThemeSwitcher from './hooks/useThemeSwitcher'
 import { usePathname, useRouter } from 'next/navigation';
 // import AnimatedCursor from 'react-animated-cursor';
 import ThemeContext from '../context/themeContext'
+import { PhoneIcon } from 'lucide-react'
 
 const MotionLink = motion.create(Link);
 
@@ -71,6 +72,7 @@ const NavBar = () => {
                 </nav>
                 <nav className='flex items-center justify-center flex-wrap'>
                     {/* <MotionLink href="" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.7 }}><TwitterIcon /></MotionLink> */}
+                    <MotionLink href="tel:6354558233" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><PhoneIcon/></MotionLink>
                     <MotionLink href="https://www.linkedin.com/in/vinay-bachani/" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><LinkedinIcon /></MotionLink>
                     <MotionLink href="https://github.com/vinaybachani" target={"_blank"} className='w-6 mx-3' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><GitHubIcon /></MotionLink>
                     <MotionLink href="https://leetcode.com/u/vinaybachani1234/" target={"_blank"} className='w-6 mx-2 dark:fill-light' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}><LeetCodeIcon /></MotionLink>
