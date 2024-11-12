@@ -66,7 +66,7 @@ const AboutPage = () => {
 
             </div>
 
-            <div className='col-span-8 sm:col-span-8 md:col-span-4 lg:col-span-4 xl:col-span-3 mx-auto right-4 relative h-max rounded-2xl border-2 border-solid border-dark bg-light dark:bg-dark p-4 md:p-6 dark:border-light order-1 md:order-2 w-full xl:w-[90%] ml-4 xl:ml-10'>
+            <div className='col-span-8 sm:col-span-8 md:col-span-4 lg:col-span-4 xl:col-span-3 mx-auto right-4 relative h-max rounded-2xl border-2 border-solid border-dark bg-light dark:bg-dark p-4 md:p-6 dark:border-light order-1 md:order-2 w-full xl:w-[90%] ml-2 xl:ml-10'>
               <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light' />
               <Image
                 src={profilePic}

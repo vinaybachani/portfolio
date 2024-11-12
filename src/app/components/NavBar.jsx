@@ -51,9 +51,10 @@ const NavBar = () => {
         setIsDarkTheme(mode === 'dark' ? true : false);
     }, [mode, setIsDarkTheme])
 
-    const handleClick = () => {
-        setIsOpen((prev) => !prev)
-    }
+    const handleClick = (event) => {
+        event.stopPropagation();
+        setIsOpen((prev) => !prev);
+    };
     useEffect(() => {
         if (isOpen) {
             document.body.classList.add('no-scroll');
@@ -68,22 +69,29 @@ const NavBar = () => {
     }, [isOpen]);
 
     const modalRef = useRef(null);
+    const buttonRef = useRef(null);
     useEffect(() => {
         const handleOutsideClick = (event) => {
-            if (modalRef.current && !modalRef.current.contains(event.target)) {
+            if (
+                modalRef.current &&
+                !modalRef.current.contains(event.target) &&
+                buttonRef.current &&
+                !buttonRef.current.contains(event.target)
+            ) {
                 setIsOpen(false);
             }
-        }
+        };
+
         document.addEventListener("mousedown", handleOutsideClick);
 
         return () => {
             document.removeEventListener("mousedown", handleOutsideClick);
         };
-    }, [setIsOpen]);
+    }, []);
 
     return (
         <header className='w-full px-8 py-8 z-10 font-medium flex items-center justify-between dark:text-light relative md:px-12 lg:px-32'>
-            <button className='flex-col justify-center items-center flex lg:hidden' onClick={handleClick}>
+            <button ref={buttonRef} className='flex-col justify-center items-center flex lg:hidden' onClick={handleClick}>
                 <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-in-out h-0.5 w-6 rounded-sm -translate-y-0.5 ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
                 <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-in-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
                 <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-in-out h-0.5 w-6 rounded-sm ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
