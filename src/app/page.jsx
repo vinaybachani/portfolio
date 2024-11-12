@@ -12,9 +12,9 @@ export default function Home() {
   return (
     <>
       <TransitionEffect />
-      <main className="text-dark w-full flex items-center justify-center min-h-[72vh] dark:text-light">
+      <main className="text-dark w-full flex items-center justify-center min-h-[90vh] dark:text-light">
         <div className={`w-full h-full flex flex-col items-center justify-center z-0 bg-light dark:bg-dark px-8 sm:px-12 md:px-16 lg:px-32 !pt-0`}>
-          <AnimateText text={"Transforming Ideas into Reality through Code and Design."} className="!text-3xl !text-center xl:!text-7xl md:!text-5xl sm:!text-3xl" />
+          <AnimateText text={"Transforming Ideas into Reality through Code and Design."} className="!text-3xl !text-center xl:!text-7xl md:!text-5xl sm:!text-3xl py-4" />
           <p className="my-4 text-xs md:text-sm lg:text-base font-medium text-center ml-2">
             {/* As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in ReactJs, NextJs and web development. */}
             As a skilled full-stack developer, I am committed to transforming ideas into cutting-edge web applications. Check out my latest projects, highlighting my expertise in tech stacks such as Next.js, React.js, Node.js, and overall web development.
