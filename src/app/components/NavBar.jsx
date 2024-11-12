@@ -51,8 +51,8 @@ const NavBar = () => {
         setIsDarkTheme(mode === 'dark' ? true : false);
     }, [mode, setIsDarkTheme])
 
-    const handleClick = (event) => {
-        event.stopPropagation();
+    const handleClick = () => {
+        // event.stopPropagation();
         setIsOpen((prev) => !prev);
     };
     useEffect(() => {
