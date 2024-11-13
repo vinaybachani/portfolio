@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion, useScroll } from "framer-motion"
 const LiIcon = ({ reference }) => {
 
