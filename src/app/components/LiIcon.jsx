@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import { motion, useScroll } from "framer-motion"
 const LiIcon = ({ reference }) => {
 
@@ -7,8 +7,10 @@ const LiIcon = ({ reference }) => {
         offset: ["center end", "center start"]
     })
 
-    useEffect(() => {
-        console.log("Scroll progress:", scrollYProgress); // Debugging scroll value in production
+    useLayoutEffect(() => {
+        scrollYProgress.onChange((value) => {
+            console.log("ScrollYProgress updated:", value);
+        });
     }, [scrollYProgress]);
 
     return (
