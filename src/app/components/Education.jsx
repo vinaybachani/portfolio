@@ -2,7 +2,6 @@
 import React, { useRef } from 'react'
 import { motion, useScroll } from 'framer-motion'
 import LiIcon from './LiIcon'
-import RippleButton from './RippleButton'
 
 const Details = ({ type, time, place, institue }) => {
     const ref = useRef(null);

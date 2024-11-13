@@ -49,24 +49,24 @@ const Experience = () => {
                         time={"July 2024 - Present"}
                         address={"Remote"}
                         work="Contributed to the development of an Election Management System (EMS) with multiple portals tailored to different professions, each serving specific purposes and functionality for diverse user needs." />
-                    <Details position={"Software Engineer Intern"}
-                        company={"Momentum Ventures"}
-                        companyLink="https://www.momentum91.com/"
-                        time={"January 2024 - July 2024"}
-                        address={"Ahmedabad, Gujarat"}
-                        work="Developed a Google Meet-like platform with Next.js, reducing page load times by 30% and boosting user engagement by 25%. Used React Redux Toolkit for responsive meeting screens, improving UI performance by 20%, and leveraged local storage for 15% faster data access. Integrated Dyte for live video/audio, streamlining development." />
-                    <Details position={"Frontend Developer"}
-                        company={"Availkart"}
-                        companyLink="/"
-                        time={"November 2022 - March 2023"}
+                    <Details position={"Full Stack Developer"}
+                        company={"ATTPL"}
+                        companyLink="https://attplems.com/"
+                        time={"July 2024 - Present"}
                         address={"Remote"}
-                        work="Developed the front-end of an e-commerce website using HTML5, CSS3, Bootstrap 5, JQuery, and JS plugins. Implemented responsive design to ensure seamless adaptation across devices (desktop, tablet, mobile) with a minimum width of 250px, optimizing user experience through fluid layouts and media queries." />
-                    <Details position={"React Developer"}
-                        company={"Franchise Insider"}
-                        companyLink="https://www.momentum91.com/"
-                        time={"November 2021 - November 2022"}
-                        address={"Ahmedabad, Gujarat"}
-                        work="Revamped the portal with ReactJS, reducing loading time and improving page efficiency from 45% to 88%. Designed dynamic, client-specific landing pages that boosted user engagement by 30%, enhancing overall user experience." />
+                        work="Contributed to the development of an Election Management System (EMS) with multiple portals tailored to different professions, each serving specific purposes and functionality for diverse user needs." />
+                    <Details position={"Full Stack Developer"}
+                        company={"ATTPL"}
+                        companyLink="https://attplems.com/"
+                        time={"July 2024 - Present"}
+                        address={"Remote"}
+                        work="Contributed to the development of an Election Management System (EMS) with multiple portals tailored to different professions, each serving specific purposes and functionality for diverse user needs." />
+                    <Details position={"Full Stack Developer"}
+                        company={"ATTPL"}
+                        companyLink="https://attplems.com/"
+                        time={"July 2024 - Present"}
+                        address={"Remote"}
+                        work="Contributed to the development of an Election Management System (EMS) with multiple portals tailored to different professions, each serving specific purposes and functionality for diverse user needs." />
                 </ul>
             </div>
         </div>
