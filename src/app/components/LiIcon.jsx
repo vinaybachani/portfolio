@@ -7,6 +7,10 @@ const LiIcon = ({ reference }) => {
         offset: ["center end", "center start"]
     })
 
+    useEffect(() => {
+        console.log("Scroll progress:", scrollYProgress); // Debugging scroll value in production
+    }, [scrollYProgress]);
+
     return (
         <figure className="absolute left-0 stroke-dark dark:stroke-light">
             <svg className='-rotate-90 w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] md:w-[75px] md:h-[75px]' viewBox='0 0 100 100'>
