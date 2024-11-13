@@ -1,17 +1,11 @@
-import React, { useEffect, useLayoutEffect } from 'react'
+import React from 'react'
 import { motion, useScroll } from "framer-motion"
 const LiIcon = ({ reference }) => {
 
     const { scrollYProgress } = useScroll({
         target: reference,
-        offset: ["center end", "center start"]
-    })
-
-    useLayoutEffect(() => {
-        scrollYProgress.onChange((value) => {
-            console.log("ScrollYProgress updated:", value);
-        });
-    }, [scrollYProgress]);
+        offset: ["start end", "end start"]
+    });
 
     return (
         <figure className="absolute left-0 stroke-dark dark:stroke-light">
